@@ -1,123 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./images/logo_head.png">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./asset/img/icone.jpg" />
     <script src="script.js"></script>
-    <title>Quizz F1</title>
-</head>
-<body>
-        <div id="head"><h1><b>F1 Quizz</b></h1></div>
-        <div id="formulaire" class="container">
-        <form>
-            <div>
-            <div id="record" class="box">
-                <p class="question">Quel pilote a le plus de record ?</p>
-                <input type="radio" name="qrp" id="record_Hamilton" value="Hamilton">
-                <label for="Hamilton" class="true"> Lewis Hamilton</label><br>
-                <input type="radio" name="qrp" id="Schumacher" value="Schumacher">
-                <label for="Schumacher" class="false"> Michael Schumacher</label><br>
-                <input type="radio" name="qrp" id="Fangio" value="Fangio">
-                <label for="Fangio" class="false"> Juan Manuel Fangio</label><br>
-                <div id="s_record"></div>
-            </div>
-            <div id="longpilote" class="box">
-                <p class="question">Quel pilote a fait le plus de départ en F1 ?</p>
-                <input type="radio" name="qlp" id="Raikonen" value="Raikonen">
-                <label for="Raikonen" class="false"> Kimi Raikonen</label><br>
-                <input type="radio" name="qlp" id="Alonso" value="Alonso">
-                <label for="Alonso" class="true"> Fernando Alonso</label><br>
-                <input type="radio" name="qlp" id="longpilote_Hamilton" value="Hamilton">
-                <label for="lp_Hamilton" class="false"> Lewis Hamilton</label><br>
-                <div id="s_longpilote"></div>
-            </div>
-            <div id="longmanag" class="box">
-                <p class="question">Quel manager a fait la plus longue longévité en F1 ?</p>
-                <input type="radio" name="qlm" id="Todt" value="Todt">
-                <label for="Todt" class="true"> Jean Todt</label><br>
-                <input type="radio" name="qlm" id="long_Williams" value="Williams">
-                <label for="Williams" class="false"> Franck Williams</label><br>
-                <input type="radio" name="qlm" id="Head" value="Head">
-                <label for="Head" class="false"> Sir Patrick Head</label><br>
-                <div id="s_longmanag"></div>
-            </div>
-            <div id="viellequipe" class="box">
-                <p class="question">Quelle est la plus vielle équipe de F1 ?</p>
-                <input type="radio" name="qv" id="v_Mclaren" value="Mclaren">
-                <label for="Mclaren" class="false"> Mclaren</label><br>
-                <input type="radio" name="qv" id="v_Williams" value="Williams">
-                <label for="Williams" class="false"> Williams</label><br>
-                <input type="radio" name="qv" id="Ferrari" value="Ferrari">
-                <label for="Ferrari" class="true"> Ferrari</label><br>  
-                <div id="s_viellequipe"></div>
-            </div>
-            <div id="longcourse" class="box">
-                <p class="question">Le plus long grand prix (avant la réglementation des 305 km) ?</p>
-                <input type="radio" name="qlgp" id="Pescara" value="Pescara">
-                <label for="Pescara" class="true"> GP Pescara 1957</label><br>
-                <input type="radio" name="qlgp" id="Nürburgring Nordschleife" value="Nürburgring Nordschleife">
-                <label for="Nürburgring Nordschleife" class="false"> GP Nürburgring Nordschleife 1951-1959</label><br>
-                <input type="radio" name="qlgp" id="France" value="France">
-                <label for="France" class="false">  GP France (Reims) 1951</label><br>
-                <div id="s_longcourse"></div>
-            </div>
-            <div id="F1academy" class="box">
-                <p class="question">Qui a été la premiere gagnante de la F1 Academy ?</p>
-                <input type="radio" name="qfa" id="Bukler" value="Bukler">
-                <label for="Bukler" class="false"> Lena Bukler</label><br>
-                <input type="radio" name="qfa" id="Qubaisi" value="Qubaisi">
-                <label for="Qubaisi" class="false"> Hamda Al Qubaisi</label><br>
-                <input type="radio" name="qfa" id="Garcia" value="Garcia">
-                <label for="Garcia" class="true">  Martha Garcia</label><br>
-                <div id="s_F1academy"></div>
-            </div>
-            <div id="AProst" class="box">
-                <p class="question">Dans quelle équipe Alain Prost a gagner ces titres ?</p>
-                <input type="radio" name="qat" id="Renault" value="Renault">
-                <label for="Renault" class="false"> Renault</label><br>
-                <input type="radio" name="qat" id="A_Mclaren" value="Mclaren">
-                <label for="Mclaren" class="true"> Mclaren</label><br>
-                <input type="radio" name="qat" id="Ferrari" value="Ferrari">
-                <label for="Ferrari" class="false"> Ferrari</label><br>   
-                <div id="s_AProst"></div>
-            </div>
-            <div id="F2" class="box">
-                <p class="question">Quelle équipe de F2 a le plus de records ?</p>
-                <input type="radio" name="qf2" id="Carlin" value="Carlin">
-                <label for="Carlin" class="false"> Carlin</label><br>
-                <input type="radio" name="qf2" id="ART" value="ART">
-                <label for="ART" class="false"> ART Grand Prix</label><br>
-                <input type="radio" name="qf2" id="Prema" value="Prema">
-                <label for="Prema" class="true"> Prema</label><br>
-                <div id="s_F2"></div>
-            </div>
-            <div id="Senna" class="box">
-                <p class="question">Dans quelle circuit Senna a t-il gagné sa premiere course de F1 ?</p>
-                <input type="radio" name="qsf1" id="Bresil" value="Bresil">
-                <label for="Bresil" class="true">  Bresil</label><br>
-                <input type="radio" name="qsf1" id="Monaco" value="Monaco">
-                <label for="Monaco" class="false"> Monaco</label><br>
-                <input type="radio" name="qsf1" id="Portugal" value="Portugal">
-                <label for="Portugal" class="false"> Portugal</label><br>
-                <div id="s_Senna"></div>
-            </div>
-            <div id="Jeunes" class="box">
-                 <p class="question">Qui est le plus jeunes pilotes de F1?</p>
-                <input type="radio" name="qj" id="Verstappen" value="Verstappen">
-                <label for="Verstappen" class="true"> Max Verstappen</label><br>
-                <input type="radio" name="qj" id="Norris" value="Norris">
-                <label for="Norris" class="false"> Lando Norris</label><br>
-                <input type="radio" name="qj" id="Stroll" value="Stroll">
-                <label for="Stroll" class="false"> Lance Stroll</label><br>
-                <div id="s_Jeunes"></div>
-            </div>
-        </form><br><br>
-</body>
-        </div>
-    </div>
-        <button onclick="Quizz()" class="button">Envoie tes réponses</button>
-        <div id="score"></div>
-</body>
+    <title>Le générateur d'histoire</title>
+  </head>
+  <body>
+    <header>
+      <h1>Le générateur d'histoire</h1>
+      <p>
+        Pour générer une histoire vous allez donc y participer. Pensez à 3
+        personnages, 3 lieux et des 3 actions (plus cela n'as rien a voir plus
+        c'est drôles au passage).
+      </p>
+    </header>
+
+    <main>
+      <input
+        type="text"
+        name="personnages"
+        id="personnages_0"
+        class="personnages"
+        placeholder="Premier personnages"
+      />
+      <input
+        type="text"
+        name="personnages"
+        id="personnages_1"
+        class="personnages"
+        placeholder="Deuxièmes personnages"
+      />
+      <input
+        type="text"
+        name="personnages"
+        id="personnages_2"
+        class="personnages"
+        placeholder="Troisième personnages"
+      />
+      <input
+        type="text"
+        name="lieux"
+        id="lieux_0"
+        class="lieux"
+        placeholder="Premier lieu"
+      />
+      <input
+        type="text"
+        name="lieux"
+        id="lieux_1"
+        class="lieux"
+        placeholder="Deuxièmes lieux"
+      />
+      <input
+        type="text"
+        name="lieux"
+        id="lieux_2"
+        class="lieux"
+        placeholder="Troisième lieux"
+      />
+      <input
+        type="text"
+        name="actions"
+        id="actions"
+        class="actions"
+        placeholder="Premier actions"
+      />
+      <input
+        type="text"
+        name="actions"
+        id="actions_1"
+        class="actions"
+        placeholder="Deuxièmes actions"
+      />
+      <input
+        type="text"
+        name="actions"
+        id="actions_2"
+        class="actions"
+        placeholder="Troisième actions"
+      />
+      <button type="button" class="btn" onclick="generateur()">
+        Générer des phrases aléatoirement
+      </button>
+      <br />
+      <div id="phrases">
+        <p>Test</p>
+      </div>
+    </main>
+    <footer>
+      <p>Créatrice Léa Martinaud</p>
+      <a
+        href="https://pixabay.com/illustrations/kitten-group-party-friendship-cute-7157608/"
+        target="_blank"
+        >Source du background</a
+      >
+    </footer>
+  </body>
 </html>
