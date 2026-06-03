@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     column-count: 3;
 }
@@ -66,3 +67,61 @@ h1{
 .question{
     text-decoration: underline;
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+@font-face{
+    font-family: PlayWrite;
+    src:url(./asset/font/Playwrite_HU/PlaywriteHU-VariableFont_wght.ttf)
+}
+
+body{
+    color: rgb(3, 3, 145);
+    font-family: PlayWrite;
+    font-size: 1em;
+    background: url(./asset/img/background.png), pink no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline overline;
+    color: red;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+input{
+    color:rgb(3, 3, 145) ;
+    font-family: PlayWrite;
+    font-size: 1em;
+}
+
+.btn{
+    margin-top: 1em;
+    grid-column: 2 / 3;
+    justify-self: center;
+    font-family: PlayWrite;
+    font-size: 1em;
+    background-color: chocolate;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:link, .btn:visited, .btn:active{
+    color: rgb(3, 3, 145);
+}
+
+#phrases{
+    color: rgb(3, 3, 145);
+    background-color: white;
+    grid-column: 2 / 3;
+    justify-self: center;    
+}
+>>>>>>> 6d54637ea1e1b9ee64d5ba8af7a1cf0d39e9b507
