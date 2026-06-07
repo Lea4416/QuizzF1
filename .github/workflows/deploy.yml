@@ -1,24 +1,25 @@
-name: Deploy SFTP PlanetHoster
+name: FTP Deploy
 
 on:
   push:
     branches:
-      - main
+        - main
+
 
 jobs:
-  deploy:
+  ftp-deploy:
+    name: Deploy site via FTP
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 5022
-          source: "."
-          target: "/quizzF1/"
+    
+    - name: Deploy with FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /quizzF1/
